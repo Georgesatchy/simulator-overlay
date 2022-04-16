@@ -21,9 +21,13 @@ const getKey = async (key) => {
 }
 
 async function getuuid(ign) {
-    const response = await fetch(`https://playerdb.co/api/player/minecraft/${ign}`);
-    const data = await response.json();
-    return(data.data.player.raw_id);
+    try {
+        const response = await fetch(`https://playerdb.co/api/player/minecraft/${ign}`);
+        const data = await response.json();
+        return (data.data.player.raw_id);
+    } catch {
+        return "nickedplayer"
+    }
 }
 
 const getPlayer = async (user) => {
