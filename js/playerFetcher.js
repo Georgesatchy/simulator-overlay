@@ -60,10 +60,10 @@ const getPlayer = async (user) => {
 
                 stats: {
                     Arcade: {
-                        wins: arcade.wins_easter_simulator || 0,
-                        collected: arcade.eggs_found_easter_simulator || 0,
-                        ppw: Math.round(((arcade.eggs_found_easter_simulator / (arcade.wins_easter_simulator || 1)) || 0) * 10) / 10,
-                        index: Math.round(((arcade.wins_easter_simulator || 0.1) * Math.sqrt((arcade.eggs_found_easter_simulator || 0))))/10
+                        wins: arcade.wins_halloween_simulator || 0,
+                        collected: arcade.candy_found_halloween_simulator || 0,
+                        ppw: Math.round(((arcade.candy_found_halloween_simulator / (arcade.wins_halloween_simulator || 1)) || 0) * 10) / 10,
+                        index: Math.round(((arcade.wins_halloween_simulator || 0.1) * Math.sqrt((arcade.candy_found_halloween_simulator || 0))))/10
                     }
                 },
                 requestedAt: requestTime
